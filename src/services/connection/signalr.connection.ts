@@ -76,7 +76,7 @@ export class SignalRConnection implements ISignalRConnection {
         }
 
         this.log(`SignalRConnection: Starting to listen to server event with name ${listener.event}`);
-        this._jProxy.on(listener.event, (...args: any[]) => {
+        this._jProxy.on(listener.event, (...args: any) => {
 
             this._zone.run(() => {
                 let casted: T = null;
